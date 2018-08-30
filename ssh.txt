@@ -1,0 +1,35 @@
+1、导入所有ssh的架包
+2、配置struts（web.xml中配置struts的filter（/*代表过滤所有后缀的路劲），监听器listener和延时加载），之后些struts文件
+3、配置hibernate.cfg.xml(配置之前先写实体类，实体类的xml文件，hibernate.cfg.xml省略不写！
+（在spring中的applicationContext.xml中有sessionFactory配置，和实体类的xml配置、开启事务！）
+4、配置action包，dao包（接口和实体），service包（接口和试题），util工具包
+   （写入思路：接口类（默认穿参，实体类）—实体类（调用hibernate，继承hibernateDaoSupper.中的hql语句）—）
+配置applicationContext.xml文件，配置bean中的sessionFactroy。datasource，类（action类和.....）
+
+5、依次编写dao层、service层、action层（在action里面转化vo、po层）,struts.xml。
+6、编写jsp页面（serviceImpl类上写注解：Transactional(注入事务)）
+
+
+mybatis
+mybatis介绍：mybatis前身ibatis
+mybatis的架构：orm架构，核心配置文件：sqlmapconfig。xml，有多少个实体类就有多少个XXXmapper。xml
+
+mybatis入门程序开发：
+
+jdbc与mabatis的区别：1、频繁的连接和浪费资源
+
+mapper的动态代理开发 接口 mapper文件 sql语句
+遵守四个
+1、接口中方法名要与mapper中的id一致
+namespace与接口的类路劲一致
+输入参数与mapper中的入参一致
+返回值与mapper中的resulttype一致
+
+sqlMapConfig.xml核心配置文件
+properties
+别名
+mappers mapper文件的所在位置（包）
+
+
+
+trim
